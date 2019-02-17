@@ -1,6 +1,1 @@
-
-dist/build/Haskell-Game/Haskell-Game-tmp/Main\.hi
-
-dist/build/Haskell-Game/Haskell-Game-tmp/Main\.o
-
-dist/build/Haskell-Game/Haskell-Game\.exe
+dist/*
