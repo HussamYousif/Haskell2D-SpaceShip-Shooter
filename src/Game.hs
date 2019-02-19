@@ -23,3 +23,12 @@ transformGame (EventKey key _ _ _) (Game (Player c))
     | key == (SpecialKey KeyLeft) = Game (Player (goLeft c))
     | key == (SpecialKey KeyRight) = Game (Player (goRight c))
 transformGame _ game = game
+
+
+-- Initial game should not contain anything more than
+initialGame :: Game
+initialGame = Game player
+    where coordinates = Coordinates 0 0
+          player = Player coordinates
+
+

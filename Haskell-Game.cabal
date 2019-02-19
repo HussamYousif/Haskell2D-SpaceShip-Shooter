@@ -17,7 +17,7 @@ cabal-version:       >=1.10
 
 executable Haskell-Game
   main-is:             Main.hs
-  other-modules: Game, Movement
+  other-modules: Game, Movement, Rendering
   -- other-extensions:
   build-depends:       base >=4.11 && <4.12,
 		       gloss
