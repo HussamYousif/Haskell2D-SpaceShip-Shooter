@@ -28,7 +28,7 @@ transformGame _ game = game
 -- Initial game should not contain anything more than
 initialGame :: Game
 initialGame = Game player
-    where coordinates = Coordinates 0 0
+    where coordinates = Coordinates 0 180
           player = Player coordinates
 
 

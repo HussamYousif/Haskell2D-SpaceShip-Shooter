@@ -6,12 +6,6 @@ import Game
 import Movement
 
 
-ship :: IO Picture
-ship = loadBMP "res\\ship1.bmp"
-
-ship' = bitmapOfBMP 
-
-
 startCircle :: Picture
 startCircle = Color white $ Circle 4.50
 
@@ -24,12 +18,12 @@ backgroudColor = black
 drawSquare :: Player -> Picture
 drawSquare (Player (Coordinates x y)) = Translate x y startCircle
 
-drawPlayer :: Player -> Picture
-drawPlayer (Player c) = ship >>= Translate x' y' ship
+drawPlayer :: Picture -> Player -> Picture
+drawPlayer ship (Player c) = Translate x' y' ship
         where x' = x c
               y' = y c
 
-gameAsPicture :: Game -> Picture
-gameAsPicture (Game player) = drawSquare player
+gameAsPicture :: Picture -> Game -> Picture
+gameAsPicture ship (Game player) = drawPlayer ship player
 
 

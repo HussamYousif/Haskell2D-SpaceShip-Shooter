@@ -7,9 +7,13 @@ data Coordinates = Coordinates {
 } deriving (Show, Eq)
 
 
+data Employee = Developer {name :: String, salary :: Int, language :: String}
+              | Marketer {name :: String, salary :: Int}
 
 velocity :: Float
 velocity = 3
+
+
 
 goUp :: Coordinates -> Coordinates
 goUp (Coordinates x y) = Coordinates x  (y+velocity)

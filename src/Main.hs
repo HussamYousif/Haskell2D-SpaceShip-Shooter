@@ -7,7 +7,11 @@ import Rendering
 import Graphics.Gloss
 import Graphics.Gloss.Interface.Pure.Game
 
+ship :: IO Picture
+ship = loadBMP "res\\ship3.bmp"
 
 main :: IO ()
-main = play window backgroudColor 60 initialGame gameAsPicture transformGame (\_ -> id)
+main = do
+    playerShip <- ship
+    play window backgroudColor 60 initialGame (gameAsPicture playerShip) transformGame (\_ -> id)
 
